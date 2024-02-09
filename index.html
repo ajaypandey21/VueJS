@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div>Outside vue</div>
+
+    <div id="root">
+      <h1>Hello from Vue, i am {{ name }} , as a {{ designation}}</h1>
+      <p v-if="showPara">{{count}}</p>
+      <button @click="onClick">Count is {{count}}</button>
+      <button v-on:click="dec">Decreamant is {{count}}</button>
+      <button @click="toggleVis">
+        <span v-if="showPara">Hide</span>
+        <span v-if="!showPara">show </span>
+      </button>
+      <button v-show="showPara">currently Showing Pages</button>
+    </div>
+  </body>
+  <script type="module" src="./script.js"></script>
+</html>
